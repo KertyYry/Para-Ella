@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>¿Quieres ser mi novia?</title>
+	<style>
+		body {
+			text-align: center; /* Centrar todo el contenido */
+		}
+		button {
+			background-color: #008CBA;
+			color: white;
+			padding: 15px 32px;
+			border: none;
+			border-radius: 8px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px 5px;
+			cursor: pointer;
+			transition-duration: 0.4s;
+		}
+		button:hover {
+			background-color: #4CAF50;
+		}
+	</style>
+	<script>
+		function seleccionRespuesta(respuesta) {
+			if (respuesta === "si") {
+				document.body.style.backgroundColor = "#FFC0CB"; // Cambiar color de fondo a rosa claro
+				document.getElementById("respuesta").innerHTML = "<p>¡Eres la persona más increíble que he conocido y me encantaría ser tu novio! <3</p>"; // Cambiar respuesta
+			} else if (respuesta === "no") {
+				alert("No </3 ¡Otra vez será!");
+			} else {
+				alert("Por favor, elige una respuesta.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>¿Quieres ser mi novia?</h1>
+	<p>Por favor, elige una respuesta:</p>
+	<button onclick="seleccionRespuesta('si')">Sí <3</button>
+	<button onclick="seleccionRespuesta('no')">No </button>
+	<div id="respuesta"></div>
+</body>
+</html>
+
